@@ -18,11 +18,12 @@ jobs:
         with:
           use-public-rspm: true
 
+      - name: Install roxygen2 
+        run: install.packages("roxygen2")
+        shell: Rscript {0}
+
       - name: Roxygenize
         run: |
-          if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
-          renv::restore()
-          renv::install("roxygen2")
           roxygen2::roxygenize('.', roclets = c('rd', 'collate', 'namespace'))
           #try(roxygen2::roxygenize())
         shell: Rscript {0}
