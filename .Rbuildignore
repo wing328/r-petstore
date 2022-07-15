@@ -11,7 +11,6 @@
 ^\.gitignore$
 ^\.openapi-generator-ignore$
 ^\.travis\.yml$
-^\.github$
 ^\.openapi-generator$
 ^docs$
 ^git_push\.sh$
