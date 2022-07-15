@@ -18,6 +18,11 @@ jobs:
         with:
           use-public-rspm: true
 
+      - name: Roxygenize
+        run: |
+          try(roxygen2::roxygenize())
+        shell: Rscript {0}
+
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: any::rcmdcheck
