@@ -20,7 +20,11 @@ jobs:
 
       - name: Roxygenize
         run: |
-          try(roxygen2::roxygenize())
+          if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
+          renv::restore()
+          renv::install("roxygen2")
+          roxygen2::roxygenize('.', roclets = c('rd', 'collate', 'namespace'))
+          #try(roxygen2::roxygenize())
         shell: Rscript {0}
 
       - uses: r-lib/actions/setup-r-dependencies@v2
