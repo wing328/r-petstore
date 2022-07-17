@@ -21,8 +21,11 @@ jobs:
           use-public-rspm: true
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: any::rcmdcheck
-          needs: check
+          extra-packages: any::rcmdcheck any::lintr, local::.
+          needs: check, lint
+      - name: Lint
+        run: lintr::lint_package()
+        shell: Rscript {0}
       - name: Install roxygen2
         run: install.packages("roxygen2")
         shell: Rscript {0}
