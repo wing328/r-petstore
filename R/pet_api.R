@@ -642,7 +642,7 @@ PetApi <- R6::R6Class(
     #' Deletes a pet
     #'
     #' @param pet_id Pet id to delete
-    #' @param api_key (optional) 
+    #' @param api_key (optional) No description
     #' @param ... Other optional arguments
     #' @return void
     #' @export
@@ -665,7 +665,7 @@ PetApi <- R6::R6Class(
     #' Deletes a pet
     #'
     #' @param pet_id Pet id to delete
-    #' @param api_key (optional) 
+    #' @param api_key (optional) No description
     #' @param ... Other optional arguments
     #' @return API response (void) with additional information such as HTTP status code, headers
     #' @export
@@ -1246,8 +1246,8 @@ PetApi <- R6::R6Class(
     #' Updates a pet in the store with form data
     #'
     #' @param pet_id ID of pet that needs to be updated
-    #' @param name (optional)Updated name of the pet 
-    #' @param status (optional)Updated status of the pet 
+    #' @param name (optional) Updated name of the pet
+    #' @param status (optional) Updated status of the pet
     #' @param ... Other optional arguments
     #' @return void
     #' @export
@@ -1341,8 +1341,8 @@ PetApi <- R6::R6Class(
     #' uploads an image
     #'
     #' @param pet_id ID of pet to update
-    #' @param additional_metadata (optional)Additional data to pass to server 
-    #' @param file (optional)file to upload 
+    #' @param additional_metadata (optional) Additional data to pass to server
+    #' @param file (optional) file to upload
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return ModelApiResponse

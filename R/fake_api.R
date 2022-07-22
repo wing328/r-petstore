@@ -93,7 +93,7 @@ FakeApi <- R6::R6Class(
     #' test data_file to ensure it's escaped correctly
     #'
     #' @param dummy dummy required parameter
-    #' @param var_data_file (optional)header data file 
+    #' @param var_data_file (optional) header data file
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return User
