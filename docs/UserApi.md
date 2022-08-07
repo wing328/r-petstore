@@ -4,18 +4,18 @@ All URIs are relative to *http://petstore.swagger.io/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateUser**](UserApi.md#CreateUser) | **POST** /user | Create user
-[**CreateUsersWithArrayInput**](UserApi.md#CreateUsersWithArrayInput) | **POST** /user/createWithArray | Creates list of users with given input array
-[**CreateUsersWithListInput**](UserApi.md#CreateUsersWithListInput) | **POST** /user/createWithList | Creates list of users with given input array
-[**DeleteUser**](UserApi.md#DeleteUser) | **DELETE** /user/{username} | Delete user
-[**GetUserByName**](UserApi.md#GetUserByName) | **GET** /user/{username} | Get user by user name
-[**LoginUser**](UserApi.md#LoginUser) | **GET** /user/login | Logs user into the system
-[**LogoutUser**](UserApi.md#LogoutUser) | **GET** /user/logout | Logs out current logged in user session
-[**UpdateUser**](UserApi.md#UpdateUser) | **PUT** /user/{username} | Updated user
+[**create_user**](UserApi.md#create_user) | **POST** /user | Create user
+[**create_users_with_array_input**](UserApi.md#create_users_with_array_input) | **POST** /user/createWithArray | Creates list of users with given input array
+[**create_users_with_list_input**](UserApi.md#create_users_with_list_input) | **POST** /user/createWithList | Creates list of users with given input array
+[**delete_user**](UserApi.md#delete_user) | **DELETE** /user/{username} | Delete user
+[**get_user_by_name**](UserApi.md#get_user_by_name) | **GET** /user/{username} | Get user by user name
+[**login_user**](UserApi.md#login_user) | **GET** /user/login | Logs user into the system
+[**logout_user**](UserApi.md#logout_user) | **GET** /user/logout | Logs out current logged in user session
+[**update_user**](UserApi.md#update_user) | **PUT** /user/{username} | Updated user
 
 
-# **CreateUser**
-> CreateUser(user)
+# **create_user**
+> create_user(user)
 
 Create user
 
@@ -30,20 +30,19 @@ var_user <- User$new(123, "username_example", "firstName_example", "lastName_exa
 #Create user
 api_instance <- UserApi$new()
 # Configure API key authorization: api_key
-api_instance$api_client$api_keys['api_key'] <- 'TODO_YOUR_API_KEY';
+api_instance$api_client$api_keys["api_key"] <- Sys.getenv("API_KEY")
 result <- tryCatch(
-             api_instance$CreateUser(var_user),
+             api_instance$create_user(var_user),
              ApiException = function(ex) ex
           )
 # In case of error, print the error object
 if (!is.null(result$ApiException)) {
-  cat(result$ApiException$toString())
-} else {
-  # response headers
-  response.headers <- result$response$headers
-  # response status code
-  response.status.code <- result$response$status_code
+  print("Exception occurs when calling `create_user`:")
+  dput(result$ApiException$toString())
+  # error object
+  dput(result$ApiException$error_object)
 }
+# This endpoint doesn't return data
 ```
 
 ### Parameters
@@ -70,8 +69,8 @@ void (empty response body)
 |-------------|-------------|------------------|
 | **0** | successful operation |  -  |
 
-# **CreateUsersWithArrayInput**
-> CreateUsersWithArrayInput(user)
+# **create_users_with_array_input**
+> create_users_with_array_input(user)
 
 Creates list of users with given input array
 
@@ -86,20 +85,19 @@ var_user <- list(User$new(123, "username_example", "firstName_example", "lastNam
 #Creates list of users with given input array
 api_instance <- UserApi$new()
 # Configure API key authorization: api_key
-api_instance$api_client$api_keys['api_key'] <- 'TODO_YOUR_API_KEY';
+api_instance$api_client$api_keys["api_key"] <- Sys.getenv("API_KEY")
 result <- tryCatch(
-             api_instance$CreateUsersWithArrayInput(var_user),
+             api_instance$create_users_with_array_input(var_user),
              ApiException = function(ex) ex
           )
 # In case of error, print the error object
 if (!is.null(result$ApiException)) {
-  cat(result$ApiException$toString())
-} else {
-  # response headers
-  response.headers <- result$response$headers
-  # response status code
-  response.status.code <- result$response$status_code
+  print("Exception occurs when calling `create_users_with_array_input`:")
+  dput(result$ApiException$toString())
+  # error object
+  dput(result$ApiException$error_object)
 }
+# This endpoint doesn't return data
 ```
 
 ### Parameters
@@ -126,8 +124,8 @@ void (empty response body)
 |-------------|-------------|------------------|
 | **0** | successful operation |  -  |
 
-# **CreateUsersWithListInput**
-> CreateUsersWithListInput(user)
+# **create_users_with_list_input**
+> create_users_with_list_input(user)
 
 Creates list of users with given input array
 
@@ -142,20 +140,19 @@ var_user <- list(User$new(123, "username_example", "firstName_example", "lastNam
 #Creates list of users with given input array
 api_instance <- UserApi$new()
 # Configure API key authorization: api_key
-api_instance$api_client$api_keys['api_key'] <- 'TODO_YOUR_API_KEY';
+api_instance$api_client$api_keys["api_key"] <- Sys.getenv("API_KEY")
 result <- tryCatch(
-             api_instance$CreateUsersWithListInput(var_user),
+             api_instance$create_users_with_list_input(var_user),
              ApiException = function(ex) ex
           )
 # In case of error, print the error object
 if (!is.null(result$ApiException)) {
-  cat(result$ApiException$toString())
-} else {
-  # response headers
-  response.headers <- result$response$headers
-  # response status code
-  response.status.code <- result$response$status_code
+  print("Exception occurs when calling `create_users_with_list_input`:")
+  dput(result$ApiException$toString())
+  # error object
+  dput(result$ApiException$error_object)
 }
+# This endpoint doesn't return data
 ```
 
 ### Parameters
@@ -182,8 +179,8 @@ void (empty response body)
 |-------------|-------------|------------------|
 | **0** | successful operation |  -  |
 
-# **DeleteUser**
-> DeleteUser(username)
+# **delete_user**
+> delete_user(username)
 
 Delete user
 
@@ -198,20 +195,19 @@ var_username <- "username_example" # character | The name that needs to be delet
 #Delete user
 api_instance <- UserApi$new()
 # Configure API key authorization: api_key
-api_instance$api_client$api_keys['api_key'] <- 'TODO_YOUR_API_KEY';
+api_instance$api_client$api_keys["api_key"] <- Sys.getenv("API_KEY")
 result <- tryCatch(
-             api_instance$DeleteUser(var_username),
+             api_instance$delete_user(var_username),
              ApiException = function(ex) ex
           )
 # In case of error, print the error object
 if (!is.null(result$ApiException)) {
-  cat(result$ApiException$toString())
-} else {
-  # response headers
-  response.headers <- result$response$headers
-  # response status code
-  response.status.code <- result$response$status_code
+  print("Exception occurs when calling `delete_user`:")
+  dput(result$ApiException$toString())
+  # error object
+  dput(result$ApiException$error_object)
 }
+# This endpoint doesn't return data
 ```
 
 ### Parameters
@@ -239,8 +235,8 @@ void (empty response body)
 | **400** | Invalid username supplied |  -  |
 | **404** | User not found |  -  |
 
-# **GetUserByName**
-> User GetUserByName(username)
+# **get_user_by_name**
+> User get_user_by_name(username)
 
 Get user by user name
 
@@ -256,21 +252,22 @@ var_username <- "username_example" # character | The name that needs to be fetch
 api_instance <- UserApi$new()
 result <- tryCatch(
              # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-             # api_instance$GetUserByName(var_username, data_file = "result.txt"),
-             api_instance$GetUserByName(var_username),
+             # api_instance$get_user_by_name(var_username, data_file = "result.txt"),
+             api_instance$get_user_by_name(var_username),
              ApiException = function(ex) ex
           )
 # In case of error, print the error object
 if (!is.null(result$ApiException)) {
-  cat(result$ApiException$toString())
+  print("Exception occurs when calling `get_user_by_name`:")
+  dput(result$ApiException$toString())
+  # error object
+  dput(result$ApiException$error_object)
 } else {
   # deserialized response object
-  response.object <- result$content
-  # response headers
-  response.headers <- result$response$headers
-  # response status code
-  response.status.code <- result$response$status_code
+  print("The response is ...")
+  dput(result$toString())
 }
+
 ```
 
 ### Parameters
@@ -299,8 +296,8 @@ No authorization required
 | **400** | Invalid username supplied |  -  |
 | **404** | User not found |  -  |
 
-# **LoginUser**
-> character LoginUser(username, password)
+# **login_user**
+> character login_user(username, password)
 
 Logs user into the system
 
@@ -317,21 +314,22 @@ var_password <- "password_example" # character | The password for login in clear
 api_instance <- UserApi$new()
 result <- tryCatch(
              # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-             # api_instance$LoginUser(var_username, var_password, data_file = "result.txt"),
-             api_instance$LoginUser(var_username, var_password),
+             # api_instance$login_user(var_username, var_password, data_file = "result.txt"),
+             api_instance$login_user(var_username, var_password),
              ApiException = function(ex) ex
           )
 # In case of error, print the error object
 if (!is.null(result$ApiException)) {
-  cat(result$ApiException$toString())
+  print("Exception occurs when calling `login_user`:")
+  dput(result$ApiException$toString())
+  # error object
+  dput(result$ApiException$error_object)
 } else {
   # deserialized response object
-  response.object <- result$content
-  # response headers
-  response.headers <- result$response$headers
-  # response status code
-  response.status.code <- result$response$status_code
+  print("The response is ...")
+  dput(result$toString())
 }
+
 ```
 
 ### Parameters
@@ -360,8 +358,8 @@ No authorization required
 | **200** | successful operation |  * Set-Cookie - Cookie authentication key for use with the &#x60;api_key&#x60; apiKey authentication. <br>  * X-Rate-Limit - calls per hour allowed by the user <br>  * X-Expires-After - date in UTC when token expires <br>  |
 | **400** | Invalid username/password supplied |  -  |
 
-# **LogoutUser**
-> LogoutUser()
+# **logout_user**
+> logout_user()
 
 Logs out current logged in user session
 
@@ -375,20 +373,19 @@ library(petstore)
 #Logs out current logged in user session
 api_instance <- UserApi$new()
 # Configure API key authorization: api_key
-api_instance$api_client$api_keys['api_key'] <- 'TODO_YOUR_API_KEY';
+api_instance$api_client$api_keys["api_key"] <- Sys.getenv("API_KEY")
 result <- tryCatch(
-             api_instance$LogoutUser(),
+             api_instance$logout_user(),
              ApiException = function(ex) ex
           )
 # In case of error, print the error object
 if (!is.null(result$ApiException)) {
-  cat(result$ApiException$toString())
-} else {
-  # response headers
-  response.headers <- result$response$headers
-  # response status code
-  response.status.code <- result$response$status_code
+  print("Exception occurs when calling `logout_user`:")
+  dput(result$ApiException$toString())
+  # error object
+  dput(result$ApiException$error_object)
 }
+# This endpoint doesn't return data
 ```
 
 ### Parameters
@@ -412,8 +409,8 @@ void (empty response body)
 |-------------|-------------|------------------|
 | **0** | successful operation |  -  |
 
-# **UpdateUser**
-> UpdateUser(username, user)
+# **update_user**
+> update_user(username, user)
 
 Updated user
 
@@ -429,20 +426,19 @@ var_user <- User$new(123, "username_example", "firstName_example", "lastName_exa
 #Updated user
 api_instance <- UserApi$new()
 # Configure API key authorization: api_key
-api_instance$api_client$api_keys['api_key'] <- 'TODO_YOUR_API_KEY';
+api_instance$api_client$api_keys["api_key"] <- Sys.getenv("API_KEY")
 result <- tryCatch(
-             api_instance$UpdateUser(var_username, var_user),
+             api_instance$update_user(var_username, var_user),
              ApiException = function(ex) ex
           )
 # In case of error, print the error object
 if (!is.null(result$ApiException)) {
-  cat(result$ApiException$toString())
-} else {
-  # response headers
-  response.headers <- result$response$headers
-  # response status code
-  response.status.code <- result$response$status_code
+  print("Exception occurs when calling `update_user`:")
+  dput(result$ApiException$toString())
+  # error object
+  dput(result$ApiException$error_object)
 }
+# This endpoint doesn't return data
 ```
 
 ### Parameters

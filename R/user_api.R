@@ -14,7 +14,7 @@
 #'
 #' @section Methods:
 #' \describe{
-#' \strong{ CreateUser } \emph{ Create user }
+#' \strong{ create_user } \emph{ Create user }
 #' This can only be done by the logged in user.
 #'
 #' \itemize{
@@ -31,7 +31,7 @@
 #' }
 #' }
 #'
-#' \strong{ CreateUsersWithArrayInput } \emph{ Creates list of users with given input array }
+#' \strong{ create_users_with_array_input } \emph{ Creates list of users with given input array }
 #' 
 #'
 #' \itemize{
@@ -48,7 +48,7 @@
 #' }
 #' }
 #'
-#' \strong{ CreateUsersWithListInput } \emph{ Creates list of users with given input array }
+#' \strong{ create_users_with_list_input } \emph{ Creates list of users with given input array }
 #' 
 #'
 #' \itemize{
@@ -65,7 +65,7 @@
 #' }
 #' }
 #'
-#' \strong{ DeleteUser } \emph{ Delete user }
+#' \strong{ delete_user } \emph{ Delete user }
 #' This can only be done by the logged in user.
 #'
 #' \itemize{
@@ -89,7 +89,7 @@
 #' }
 #' }
 #'
-#' \strong{ GetUserByName } \emph{ Get user by user name }
+#' \strong{ get_user_by_name } \emph{ Get user by user name }
 #' 
 #'
 #' \itemize{
@@ -121,7 +121,7 @@
 #' }
 #' }
 #'
-#' \strong{ LoginUser } \emph{ Logs user into the system }
+#' \strong{ login_user } \emph{ Logs user into the system }
 #' 
 #'
 #' \itemize{
@@ -149,7 +149,7 @@
 #' }
 #' }
 #'
-#' \strong{ LogoutUser } \emph{ Logs out current logged in user session }
+#' \strong{ logout_user } \emph{ Logs out current logged in user session }
 #' 
 #'
 #' \itemize{
@@ -165,7 +165,7 @@
 #' }
 #' }
 #'
-#' \strong{ UpdateUser } \emph{ Updated user }
+#' \strong{ update_user } \emph{ Updated user }
 #' This can only be done by the logged in user.
 #'
 #' \itemize{
@@ -195,7 +195,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' ####################  CreateUser  ####################
+#' ####################  create_user  ####################
 #'
 #' library(petstore)
 #' var.user <- User$new() # User | Created user object
@@ -207,7 +207,7 @@
 #' api.instance$api_client$api_keys['api_key'] <- 'TODO_YOUR_API_KEY';
 #'
 #'result <- tryCatch(
-#'             api.instance$CreateUser(var.user),
+#'             api.instance$create_user(var.user),
 #'             ApiException = function(ex) ex
 #'          )
 #' # In case of error, print the error object
@@ -221,7 +221,7 @@
 #' }
 #'
 #'
-#' ####################  CreateUsersWithArrayInput  ####################
+#' ####################  create_users_with_array_input  ####################
 #'
 #' library(petstore)
 #' var.user <- [User$new()] # array[User] | List of user object
@@ -233,7 +233,7 @@
 #' api.instance$api_client$api_keys['api_key'] <- 'TODO_YOUR_API_KEY';
 #'
 #'result <- tryCatch(
-#'             api.instance$CreateUsersWithArrayInput(var.user),
+#'             api.instance$create_users_with_array_input(var.user),
 #'             ApiException = function(ex) ex
 #'          )
 #' # In case of error, print the error object
@@ -247,7 +247,7 @@
 #' }
 #'
 #'
-#' ####################  CreateUsersWithListInput  ####################
+#' ####################  create_users_with_list_input  ####################
 #'
 #' library(petstore)
 #' var.user <- [User$new()] # array[User] | List of user object
@@ -259,7 +259,7 @@
 #' api.instance$api_client$api_keys['api_key'] <- 'TODO_YOUR_API_KEY';
 #'
 #'result <- tryCatch(
-#'             api.instance$CreateUsersWithListInput(var.user),
+#'             api.instance$create_users_with_list_input(var.user),
 #'             ApiException = function(ex) ex
 #'          )
 #' # In case of error, print the error object
@@ -273,7 +273,7 @@
 #' }
 #'
 #'
-#' ####################  DeleteUser  ####################
+#' ####################  delete_user  ####################
 #'
 #' library(petstore)
 #' var.username <- "username_example" # character | The name that needs to be deleted
@@ -285,7 +285,7 @@
 #' api.instance$api_client$api_keys['api_key'] <- 'TODO_YOUR_API_KEY';
 #'
 #'result <- tryCatch(
-#'             api.instance$DeleteUser(var.username),
+#'             api.instance$delete_user(var.username),
 #'             ApiException = function(ex) ex
 #'          )
 #' # In case of error, print the error object
@@ -299,7 +299,7 @@
 #' }
 #'
 #'
-#' ####################  GetUserByName  ####################
+#' ####################  get_user_by_name  ####################
 #'
 #' library(petstore)
 #' var.username <- "username_example" # character | The name that needs to be fetched. Use user1 for testing.
@@ -308,7 +308,7 @@
 #' api.instance <- UserApi$new()
 #'
 #'result <- tryCatch(
-#'             api.instance$GetUserByName(var.username),
+#'             api.instance$get_user_by_name(var.username),
 #'             ApiException = function(ex) ex
 #'          )
 #' # In case of error, print the error object
@@ -324,7 +324,7 @@
 #' }
 #'
 #'
-#' ####################  LoginUser  ####################
+#' ####################  login_user  ####################
 #'
 #' library(petstore)
 #' var.username <- "username_example" # character | The user name for login
@@ -334,7 +334,7 @@
 #' api.instance <- UserApi$new()
 #'
 #'result <- tryCatch(
-#'             api.instance$LoginUser(var.username, var.password),
+#'             api.instance$login_user(var.username, var.password),
 #'             ApiException = function(ex) ex
 #'          )
 #' # In case of error, print the error object
@@ -350,7 +350,7 @@
 #' }
 #'
 #'
-#' ####################  LogoutUser  ####################
+#' ####################  logout_user  ####################
 #'
 #' library(petstore)
 #'
@@ -361,7 +361,7 @@
 #' api.instance$api_client$api_keys['api_key'] <- 'TODO_YOUR_API_KEY';
 #'
 #'result <- tryCatch(
-#'             api.instance$LogoutUser(),
+#'             api.instance$logout_user(),
 #'             ApiException = function(ex) ex
 #'          )
 #' # In case of error, print the error object
@@ -375,7 +375,7 @@
 #' }
 #'
 #'
-#' ####################  UpdateUser  ####################
+#' ####################  update_user  ####################
 #'
 #' library(petstore)
 #' var.username <- "username_example" # character | name that need to be deleted
@@ -388,7 +388,7 @@
 #' api.instance$api_client$api_keys['api_key'] <- 'TODO_YOUR_API_KEY';
 #'
 #'result <- tryCatch(
-#'             api.instance$UpdateUser(var.username, var.user),
+#'             api.instance$update_user(var.username, var.user),
 #'             ApiException = function(ex) ex
 #'          )
 #' # In case of error, print the error object
@@ -434,17 +434,16 @@ UserApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return void
     #' @export
-    CreateUser = function(user, ...) {
-      api_response <- self$CreateUserWithHttpInfo(user, ...)
-      resp <- api_response$response
-      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
-        api_response$content
-      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
-        api_response
-      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
-        api_response
-      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
-        api_response
+    create_user = function(user, ...) {
+      local_var_response <- self$create_user_with_http_info(user, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
       }
     },
     #' Create user
@@ -456,10 +455,15 @@ UserApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return API response (void) with additional information such as HTTP status code, headers
     #' @export
-    CreateUserWithHttpInfo = function(user, ...) {
+    create_user_with_http_info = function(user, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
 
       if (missing(`user`)) {
         rlang::abort(message = "Missing required parameter `user`.",
@@ -468,51 +472,65 @@ UserApi <- R6::R6Class(
                                                      reason = "Missing required parameter `user`."))
       }
 
+
       if (!missing(`user`)) {
-        body <- `user`$toJSONString()
+        local_var_body <- `user`$toJSONString()
       } else {
         body <- NULL
       }
 
-      url_path <- "/user"
+      local_var_url_path <- "/user"
       # API key authentication
       if ("api_key" %in% names(self$api_client$api_keys) && nchar(self$api_client$api_keys["api_key"]) > 0) {
         header_params["api_key"] <- paste(unlist(self$api_client$api_keys["api_key"]), collapse = "")
       }
 
-      resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, url_path),
+      # The Accept request HTTP header
+      local_var_accepts = list()
+
+      # The Content-Type representation header
+      local_var_content_types = list("application/json")
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
                                  method = "POST",
                                  query_params = query_params,
                                  header_params = header_params,
-                                 body = body,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
                                  ...)
 
-      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
-        ApiResponse$new(NULL, resp)
-      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- paste("Server returned ", httr::status_code(resp), " response status code.")
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        local_var_resp$content <- NULL
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- paste("Server returned ", local_var_resp$status_code, " response status code.")
+        }
+        rlang::abort(message = local_var_error_msg,
+                     .subclass = "ApiException",
+                     ApiException = ApiException$new(http_response = local_var_resp))
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- "Api client exception encountered."
+        }
+        rlang::abort(message = local_var_error_msg,
+                     .subclass = "ApiException",
+                     ApiException = ApiException$new(http_response = local_var_resp))
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- "Api server exception encountered."
         }
         rlang::abort(message = error_msg,
                      .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
-      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- "Api client exception encountered."
-        }
-        rlang::abort(message = error_msg,
-                     .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
-      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- "Api server exception encountered."
-        }
-        rlang::abort(message = error_msg,
-                     .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
+                     ApiException = ApiException$new(http_response = local_var_resp))
       }
     },
     #' Creates list of users with given input array
@@ -524,17 +542,16 @@ UserApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return void
     #' @export
-    CreateUsersWithArrayInput = function(user, ...) {
-      api_response <- self$CreateUsersWithArrayInputWithHttpInfo(user, ...)
-      resp <- api_response$response
-      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
-        api_response$content
-      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
-        api_response
-      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
-        api_response
-      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
-        api_response
+    create_users_with_array_input = function(user, ...) {
+      local_var_response <- self$create_users_with_array_input_with_http_info(user, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
       }
     },
     #' Creates list of users with given input array
@@ -546,10 +563,15 @@ UserApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return API response (void) with additional information such as HTTP status code, headers
     #' @export
-    CreateUsersWithArrayInputWithHttpInfo = function(user, ...) {
+    create_users_with_array_input_with_http_info = function(user, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
 
       if (missing(`user`)) {
         rlang::abort(message = "Missing required parameter `user`.",
@@ -558,54 +580,68 @@ UserApi <- R6::R6Class(
                                                      reason = "Missing required parameter `user`."))
       }
 
+
       if (!missing(`user`)) {
-        body.items <- paste(unlist(lapply(user, function(param) {
+        body.items <- paste(unlist(lapply(`user`, function(param) {
                                                              param$toJSONString()
                                                          })), collapse = ",")
-        body <- paste0("[", body.items, "]")
+        local_var_body <- paste0("[", body.items, "]")
       } else {
         body <- NULL
       }
 
-      url_path <- "/user/createWithArray"
+      local_var_url_path <- "/user/createWithArray"
       # API key authentication
       if ("api_key" %in% names(self$api_client$api_keys) && nchar(self$api_client$api_keys["api_key"]) > 0) {
         header_params["api_key"] <- paste(unlist(self$api_client$api_keys["api_key"]), collapse = "")
       }
 
-      resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, url_path),
+      # The Accept request HTTP header
+      local_var_accepts = list()
+
+      # The Content-Type representation header
+      local_var_content_types = list("application/json")
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
                                  method = "POST",
                                  query_params = query_params,
                                  header_params = header_params,
-                                 body = body,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
                                  ...)
 
-      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
-        ApiResponse$new(NULL, resp)
-      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- paste("Server returned ", httr::status_code(resp), " response status code.")
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        local_var_resp$content <- NULL
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- paste("Server returned ", local_var_resp$status_code, " response status code.")
+        }
+        rlang::abort(message = local_var_error_msg,
+                     .subclass = "ApiException",
+                     ApiException = ApiException$new(http_response = local_var_resp))
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- "Api client exception encountered."
+        }
+        rlang::abort(message = local_var_error_msg,
+                     .subclass = "ApiException",
+                     ApiException = ApiException$new(http_response = local_var_resp))
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- "Api server exception encountered."
         }
         rlang::abort(message = error_msg,
                      .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
-      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- "Api client exception encountered."
-        }
-        rlang::abort(message = error_msg,
-                     .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
-      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- "Api server exception encountered."
-        }
-        rlang::abort(message = error_msg,
-                     .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
+                     ApiException = ApiException$new(http_response = local_var_resp))
       }
     },
     #' Creates list of users with given input array
@@ -617,17 +653,16 @@ UserApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return void
     #' @export
-    CreateUsersWithListInput = function(user, ...) {
-      api_response <- self$CreateUsersWithListInputWithHttpInfo(user, ...)
-      resp <- api_response$response
-      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
-        api_response$content
-      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
-        api_response
-      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
-        api_response
-      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
-        api_response
+    create_users_with_list_input = function(user, ...) {
+      local_var_response <- self$create_users_with_list_input_with_http_info(user, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
       }
     },
     #' Creates list of users with given input array
@@ -639,10 +674,15 @@ UserApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return API response (void) with additional information such as HTTP status code, headers
     #' @export
-    CreateUsersWithListInputWithHttpInfo = function(user, ...) {
+    create_users_with_list_input_with_http_info = function(user, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
 
       if (missing(`user`)) {
         rlang::abort(message = "Missing required parameter `user`.",
@@ -651,54 +691,68 @@ UserApi <- R6::R6Class(
                                                      reason = "Missing required parameter `user`."))
       }
 
+
       if (!missing(`user`)) {
-        body.items <- paste(unlist(lapply(user, function(param) {
+        body.items <- paste(unlist(lapply(`user`, function(param) {
                                                              param$toJSONString()
                                                          })), collapse = ",")
-        body <- paste0("[", body.items, "]")
+        local_var_body <- paste0("[", body.items, "]")
       } else {
         body <- NULL
       }
 
-      url_path <- "/user/createWithList"
+      local_var_url_path <- "/user/createWithList"
       # API key authentication
       if ("api_key" %in% names(self$api_client$api_keys) && nchar(self$api_client$api_keys["api_key"]) > 0) {
         header_params["api_key"] <- paste(unlist(self$api_client$api_keys["api_key"]), collapse = "")
       }
 
-      resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, url_path),
+      # The Accept request HTTP header
+      local_var_accepts = list()
+
+      # The Content-Type representation header
+      local_var_content_types = list("application/json")
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
                                  method = "POST",
                                  query_params = query_params,
                                  header_params = header_params,
-                                 body = body,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
                                  ...)
 
-      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
-        ApiResponse$new(NULL, resp)
-      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- paste("Server returned ", httr::status_code(resp), " response status code.")
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        local_var_resp$content <- NULL
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- paste("Server returned ", local_var_resp$status_code, " response status code.")
+        }
+        rlang::abort(message = local_var_error_msg,
+                     .subclass = "ApiException",
+                     ApiException = ApiException$new(http_response = local_var_resp))
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- "Api client exception encountered."
+        }
+        rlang::abort(message = local_var_error_msg,
+                     .subclass = "ApiException",
+                     ApiException = ApiException$new(http_response = local_var_resp))
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- "Api server exception encountered."
         }
         rlang::abort(message = error_msg,
                      .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
-      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- "Api client exception encountered."
-        }
-        rlang::abort(message = error_msg,
-                     .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
-      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- "Api server exception encountered."
-        }
-        rlang::abort(message = error_msg,
-                     .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
+                     ApiException = ApiException$new(http_response = local_var_resp))
       }
     },
     #' Delete user
@@ -710,17 +764,16 @@ UserApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return void
     #' @export
-    DeleteUser = function(username, ...) {
-      api_response <- self$DeleteUserWithHttpInfo(username, ...)
-      resp <- api_response$response
-      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
-        api_response$content
-      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
-        api_response
-      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
-        api_response
-      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
-        api_response
+    delete_user = function(username, ...) {
+      local_var_response <- self$delete_user_with_http_info(username, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
       }
     },
     #' Delete user
@@ -732,10 +785,15 @@ UserApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return API response (void) with additional information such as HTTP status code, headers
     #' @export
-    DeleteUserWithHttpInfo = function(username, ...) {
+    delete_user_with_http_info = function(username, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
 
       if (missing(`username`)) {
         rlang::abort(message = "Missing required parameter `username`.",
@@ -744,10 +802,10 @@ UserApi <- R6::R6Class(
                                                      reason = "Missing required parameter `username`."))
       }
 
-      body <- NULL
-      url_path <- "/user/{username}"
+
+      local_var_url_path <- "/user/{username}"
       if (!missing(`username`)) {
-        url_path <- gsub(paste0("\\{", "username", "\\}"), URLencode(as.character(`username`), reserved = TRUE), url_path)
+        local_var_url_path <- gsub(paste0("\\{", "username", "\\}"), URLencode(as.character(`username`), reserved = TRUE), local_var_url_path)
       }
 
       # API key authentication
@@ -755,39 +813,52 @@ UserApi <- R6::R6Class(
         header_params["api_key"] <- paste(unlist(self$api_client$api_keys["api_key"]), collapse = "")
       }
 
-      resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, url_path),
+      # The Accept request HTTP header
+      local_var_accepts = list()
+
+      # The Content-Type representation header
+      local_var_content_types = list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
                                  method = "DELETE",
                                  query_params = query_params,
                                  header_params = header_params,
-                                 body = body,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
                                  ...)
 
-      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
-        ApiResponse$new(NULL, resp)
-      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- paste("Server returned ", httr::status_code(resp), " response status code.")
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        local_var_resp$content <- NULL
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- paste("Server returned ", local_var_resp$status_code, " response status code.")
+        }
+        rlang::abort(message = local_var_error_msg,
+                     .subclass = "ApiException",
+                     ApiException = ApiException$new(http_response = local_var_resp))
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- "Api client exception encountered."
+        }
+        rlang::abort(message = local_var_error_msg,
+                     .subclass = "ApiException",
+                     ApiException = ApiException$new(http_response = local_var_resp))
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- "Api server exception encountered."
         }
         rlang::abort(message = error_msg,
                      .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
-      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- "Api client exception encountered."
-        }
-        rlang::abort(message = error_msg,
-                     .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
-      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- "Api server exception encountered."
-        }
-        rlang::abort(message = error_msg,
-                     .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
+                     ApiException = ApiException$new(http_response = local_var_resp))
       }
     },
     #' Get user by user name
@@ -800,17 +871,16 @@ UserApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return User
     #' @export
-    GetUserByName = function(username, data_file = NULL, ...) {
-      api_response <- self$GetUserByNameWithHttpInfo(username, data_file = data_file, ...)
-      resp <- api_response$response
-      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
-        api_response$content
-      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
-        api_response
-      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
-        api_response
-      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
-        api_response
+    get_user_by_name = function(username, data_file = NULL, ...) {
+      local_var_response <- self$get_user_by_name_with_http_info(username, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
       }
     },
     #' Get user by user name
@@ -823,10 +893,15 @@ UserApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return API response (User) with additional information such as HTTP status code, headers
     #' @export
-    GetUserByNameWithHttpInfo = function(username, data_file = NULL, ...) {
+    get_user_by_name_with_http_info = function(username, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
 
       if (missing(`username`)) {
         rlang::abort(message = "Missing required parameter `username`.",
@@ -835,59 +910,72 @@ UserApi <- R6::R6Class(
                                                      reason = "Missing required parameter `username`."))
       }
 
-      body <- NULL
-      url_path <- "/user/{username}"
+
+      local_var_url_path <- "/user/{username}"
       if (!missing(`username`)) {
-        url_path <- gsub(paste0("\\{", "username", "\\}"), URLencode(as.character(`username`), reserved = TRUE), url_path)
+        local_var_url_path <- gsub(paste0("\\{", "username", "\\}"), URLencode(as.character(`username`), reserved = TRUE), local_var_url_path)
       }
 
 
-      resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, url_path),
+      # The Accept request HTTP header
+      local_var_accepts = list("application/xml", "application/json")
+
+      # The Content-Type representation header
+      local_var_content_types = list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
                                  method = "GET",
                                  query_params = query_params,
                                  header_params = header_params,
-                                 body = body,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
                                  ...)
 
-      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(httr::content(resp, "text", encoding = "UTF-8", simplifyVector = FALSE), data_file)
+            write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(resp, "User", loadNamespace("petstore")),
+          self$api_client$deserialize(local_var_resp$response, "User", loadNamespace("petstore")),
           error = function(e) {
              rlang::abort(message = "Failed to deserialize response",
                           .subclass = "ApiException",
-                          ApiException = ApiException$new(http_response = resp))
+                          ApiException = ApiException$new(http_response = local_var_resp))
           }
         )
-        ApiResponse$new(deserialized_resp_obj, resp)
-      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- paste("Server returned ", httr::status_code(resp), " response status code.")
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- paste("Server returned ", local_var_resp$status_code, " response status code.")
+        }
+        rlang::abort(message = local_var_error_msg,
+                     .subclass = "ApiException",
+                     ApiException = ApiException$new(http_response = local_var_resp))
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- "Api client exception encountered."
+        }
+        rlang::abort(message = local_var_error_msg,
+                     .subclass = "ApiException",
+                     ApiException = ApiException$new(http_response = local_var_resp))
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- "Api server exception encountered."
         }
         rlang::abort(message = error_msg,
                      .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
-      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- "Api client exception encountered."
-        }
-        rlang::abort(message = error_msg,
-                     .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
-      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- "Api server exception encountered."
-        }
-        rlang::abort(message = error_msg,
-                     .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
+                     ApiException = ApiException$new(http_response = local_var_resp))
       }
     },
     #' Logs user into the system
@@ -901,17 +989,16 @@ UserApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return character
     #' @export
-    LoginUser = function(username, password, data_file = NULL, ...) {
-      api_response <- self$LoginUserWithHttpInfo(username, password, data_file = data_file, ...)
-      resp <- api_response$response
-      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
-        api_response$content
-      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
-        api_response
-      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
-        api_response
-      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
-        api_response
+    login_user = function(username, password, data_file = NULL, ...) {
+      local_var_response <- self$login_user_with_http_info(username, password, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
       }
     },
     #' Logs user into the system
@@ -925,10 +1012,15 @@ UserApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return API response (character) with additional information such as HTTP status code, headers
     #' @export
-    LoginUserWithHttpInfo = function(username, password, data_file = NULL, ...) {
+    login_user_with_http_info = function(username, password, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
 
       if (missing(`username`)) {
         rlang::abort(message = "Missing required parameter `username`.",
@@ -944,55 +1036,79 @@ UserApi <- R6::R6Class(
                                                      reason = "Missing required parameter `password`."))
       }
 
-      body <- NULL
-      url_path <- "/user/login"
+      if (!str_detect(`username`, "/^[a-zA-Z0-9]+[a-zA-Z0-9\\.\\-_]*[a-zA-Z0-9]+$/")) {
+        rlang::abort(message = "Invalid value for `username` when calling UserApi$login_user, must conform to the pattern /^[a-zA-Z0-9]+[a-zA-Z0-9\\.\\-_]*[a-zA-Z0-9]+$/.",
+                     .subclass = "ApiException",
+                     ApiException = ApiException$new(status = 0,
+                                                     reason = "Invalid value for `username` when calling UserApi$login_user, must conform to the pattern /^[a-zA-Z0-9]+[a-zA-Z0-9\\.\\-_]*[a-zA-Z0-9]+$/."))
+      }
 
-      resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, url_path),
+
+      query_params["username"] <- `username`
+
+      query_params["password"] <- `password`
+
+      local_var_url_path <- "/user/login"
+
+      # The Accept request HTTP header
+      local_var_accepts = list("application/xml", "application/json")
+
+      # The Content-Type representation header
+      local_var_content_types = list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
                                  method = "GET",
                                  query_params = query_params,
                                  header_params = header_params,
-                                 body = body,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
                                  ...)
 
-      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
         # save response in a file
         if (!is.null(data_file)) {
-            write(httr::content(resp, "text", encoding = "UTF-8", simplifyVector = FALSE), data_file)
+            write(local_var_resp$response, data_file)
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(resp, "character", loadNamespace("petstore")),
+          self$api_client$deserialize(local_var_resp$response, "character", loadNamespace("petstore")),
           error = function(e) {
              rlang::abort(message = "Failed to deserialize response",
                           .subclass = "ApiException",
-                          ApiException = ApiException$new(http_response = resp))
+                          ApiException = ApiException$new(http_response = local_var_resp))
           }
         )
-        ApiResponse$new(deserialized_resp_obj, resp)
-      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- paste("Server returned ", httr::status_code(resp), " response status code.")
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- paste("Server returned ", local_var_resp$status_code, " response status code.")
+        }
+        rlang::abort(message = local_var_error_msg,
+                     .subclass = "ApiException",
+                     ApiException = ApiException$new(http_response = local_var_resp))
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- "Api client exception encountered."
+        }
+        rlang::abort(message = local_var_error_msg,
+                     .subclass = "ApiException",
+                     ApiException = ApiException$new(http_response = local_var_resp))
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- "Api server exception encountered."
         }
         rlang::abort(message = error_msg,
                      .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
-      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- "Api client exception encountered."
-        }
-        rlang::abort(message = error_msg,
-                     .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
-      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- "Api server exception encountered."
-        }
-        rlang::abort(message = error_msg,
-                     .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
+                     ApiException = ApiException$new(http_response = local_var_resp))
       }
     },
     #' Logs out current logged in user session
@@ -1003,17 +1119,16 @@ UserApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return void
     #' @export
-    LogoutUser = function(...) {
-      api_response <- self$LogoutUserWithHttpInfo(...)
-      resp <- api_response$response
-      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
-        api_response$content
-      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
-        api_response
-      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
-        api_response
-      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
-        api_response
+    logout_user = function(...) {
+      local_var_response <- self$logout_user_with_http_info(...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
       }
     },
     #' Logs out current logged in user session
@@ -1024,51 +1139,68 @@ UserApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return API response (void) with additional information such as HTTP status code, headers
     #' @export
-    LogoutUserWithHttpInfo = function(...) {
+    logout_user_with_http_info = function(...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
 
-      body <- NULL
-      url_path <- "/user/logout"
+      local_var_url_path <- "/user/logout"
       # API key authentication
       if ("api_key" %in% names(self$api_client$api_keys) && nchar(self$api_client$api_keys["api_key"]) > 0) {
         header_params["api_key"] <- paste(unlist(self$api_client$api_keys["api_key"]), collapse = "")
       }
 
-      resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, url_path),
+      # The Accept request HTTP header
+      local_var_accepts = list()
+
+      # The Content-Type representation header
+      local_var_content_types = list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
                                  method = "GET",
                                  query_params = query_params,
                                  header_params = header_params,
-                                 body = body,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
                                  ...)
 
-      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
-        ApiResponse$new(NULL, resp)
-      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- paste("Server returned ", httr::status_code(resp), " response status code.")
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        local_var_resp$content <- NULL
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- paste("Server returned ", local_var_resp$status_code, " response status code.")
+        }
+        rlang::abort(message = local_var_error_msg,
+                     .subclass = "ApiException",
+                     ApiException = ApiException$new(http_response = local_var_resp))
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- "Api client exception encountered."
+        }
+        rlang::abort(message = local_var_error_msg,
+                     .subclass = "ApiException",
+                     ApiException = ApiException$new(http_response = local_var_resp))
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- "Api server exception encountered."
         }
         rlang::abort(message = error_msg,
                      .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
-      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- "Api client exception encountered."
-        }
-        rlang::abort(message = error_msg,
-                     .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
-      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- "Api server exception encountered."
-        }
-        rlang::abort(message = error_msg,
-                     .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
+                     ApiException = ApiException$new(http_response = local_var_resp))
       }
     },
     #' Updated user
@@ -1081,17 +1213,16 @@ UserApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return void
     #' @export
-    UpdateUser = function(username, user, ...) {
-      api_response <- self$UpdateUserWithHttpInfo(username, user, ...)
-      resp <- api_response$response
-      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
-        api_response$content
-      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
-        api_response
-      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
-        api_response
-      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
-        api_response
+    update_user = function(username, user, ...) {
+      local_var_response <- self$update_user_with_http_info(username, user, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
       }
     },
     #' Updated user
@@ -1104,10 +1235,15 @@ UserApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return API response (void) with additional information such as HTTP status code, headers
     #' @export
-    UpdateUserWithHttpInfo = function(username, user, ...) {
+    update_user_with_http_info = function(username, user, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
 
       if (missing(`username`)) {
         rlang::abort(message = "Missing required parameter `username`.",
@@ -1123,15 +1259,17 @@ UserApi <- R6::R6Class(
                                                      reason = "Missing required parameter `user`."))
       }
 
+
+
       if (!missing(`user`)) {
-        body <- `user`$toJSONString()
+        local_var_body <- `user`$toJSONString()
       } else {
         body <- NULL
       }
 
-      url_path <- "/user/{username}"
+      local_var_url_path <- "/user/{username}"
       if (!missing(`username`)) {
-        url_path <- gsub(paste0("\\{", "username", "\\}"), URLencode(as.character(`username`), reserved = TRUE), url_path)
+        local_var_url_path <- gsub(paste0("\\{", "username", "\\}"), URLencode(as.character(`username`), reserved = TRUE), local_var_url_path)
       }
 
       # API key authentication
@@ -1139,39 +1277,52 @@ UserApi <- R6::R6Class(
         header_params["api_key"] <- paste(unlist(self$api_client$api_keys["api_key"]), collapse = "")
       }
 
-      resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, url_path),
+      # The Accept request HTTP header
+      local_var_accepts = list()
+
+      # The Content-Type representation header
+      local_var_content_types = list("application/json")
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
                                  method = "PUT",
                                  query_params = query_params,
                                  header_params = header_params,
-                                 body = body,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
                                  ...)
 
-      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
-        ApiResponse$new(NULL, resp)
-      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- paste("Server returned ", httr::status_code(resp), " response status code.")
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        local_var_resp$content <- NULL
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- paste("Server returned ", local_var_resp$status_code, " response status code.")
+        }
+        rlang::abort(message = local_var_error_msg,
+                     .subclass = "ApiException",
+                     ApiException = ApiException$new(http_response = local_var_resp))
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- "Api client exception encountered."
+        }
+        rlang::abort(message = local_var_error_msg,
+                     .subclass = "ApiException",
+                     ApiException = ApiException$new(http_response = local_var_resp))
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        local_var_error_msg <- local_var_resp$response
+        if (local_var_error_msg == "") {
+          local_var_error_msg <- "Api server exception encountered."
         }
         rlang::abort(message = error_msg,
                      .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
-      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- "Api client exception encountered."
-        }
-        rlang::abort(message = error_msg,
-                     .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
-      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
-        error_msg <- toString(content(resp))
-        if (error_msg == "") {
-          error_msg <- "Api server exception encountered."
-        }
-        rlang::abort(message = error_msg,
-                     .subclass = "ApiException",
-                     ApiException = ApiException$new(http_response = resp))
+                     ApiException = ApiException$new(http_response = local_var_resp))
       }
     }
   )
