@@ -331,12 +331,12 @@ ApiClient  <- R6::R6Class(
       resp_obj <- jsonlite::fromJSON(raw_response)
       self$deserializeObj(resp_obj, return_type, pkg_env)
     },
-    #' Deserialize the response from jsonlite object based on the given type
+    #' Deserialize the response from jsonlite object based on the given type.
     #'
     #' @description
-    #' Deserialize the response from jsonlite object based on the given type
+    #' Deserialize the response from jsonlite object based on the given type.
     #' by handling complex and nested types by iterating recursively
-    #' Example return_types will be like "array[integer]", "map(Pet)", "array[map(Tag)]", etc.,
+    #' Example return_types will be like "array[integer]", "map(Pet)", "array[map(Tag)]", etc.
     #'
     #' @param obj Response object.
     #' @param return_type R return type.
@@ -390,8 +390,7 @@ ApiClient  <- R6::R6Class(
       }
       return_obj
     },
-    #' Return a propery header (for accept or content-type). If JSON-related MIME is found,
-    #' return it. Otherwise, return the first one, if any.
+    #' Return a propery header (for accept or content-type).
     #'
     #' @description
     #' Return a propery header (for accept or content-type). If JSON-related MIME is found,
